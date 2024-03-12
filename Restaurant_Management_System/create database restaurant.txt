@@ -1,0 +1,73 @@
+create database restaurant;
+ use restaurant;
+CREATE TABLE menu_items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  category VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE orders (
+
+  menu_item_id INT NOT NULL,
+  food_name VARCHAR(40),
+  quantity INT NOT NULL,
+  total_price DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (menu_item_id) REFERENCES menu_items(id)
+);
+
+select * from menu_items;
+insert into   menu_items values (2,"Idly",10.00,"Veg");
+delete from  menu_items where id=1;
+select * from menu_items;
+delete from  menu_items where id=2;
+insert into   menu_items values (1,"Dosa",30.00,"Veg");
+insert into   menu_items values (2,"Idly",10.00,"Veg");
+insert into   menu_items values (3,"Chappati",15.00,"Veg");
+insert into   menu_items values (4,"parrota",10.00,"Non-veg");
+insert into   menu_items values (5,"pongal",50.00,"Veg");
+insert into   menu_items values (6,"vada",10.00,"Veg");
+insert into   menu_items values (7,"ChickenBriyani",200.00,"Non-Veg");
+insert into   menu_items values (8,"VegBriyani",150.00,"Veg");
+insert into   menu_items values (9,"MuttonBriyani",250.00,"Non-Veg");
+insert into   menu_items values (10,"Meals",150.00,"Veg");
+insert into   menu_items values (11,"Noodles",70.00,"Veg");
+insert into   menu_items values (12,"Noodles",70.00,"Non-Veg");
+insert into   menu_items values (13,"ChickenRice",80.00,"Veg");
+insert into   menu_items values (14,"ChickenRice",80.00,"Non-Veg");
+insert into   menu_items values (15,"BeafBriyani",250.00,"Non-Veg");
+insert into   menu_items values (16,"PeppeCicken",120.00,"Startees");
+insert into   menu_items values (17,"BarbequeChicken",400.00,"Startees");
+insert into   menu_items values (25,"ChocoMilshake",50.00,"Shakes");
+select * from orders;
+insert into   menu_items values (1,"Dosa",30.00,"Veg");
+insert into   menu_items values (2,"GheeRoast",40.00,"Veg");
+insert into   menu_items values (3,"OnionRoast",40.00,"Veg");
+insert into   menu_items values (4,"Chappati",15.00,"Veg");
+insert into   menu_items values (5,"Pongal",50.00,"Veg");
+insert into   menu_items values (6,"Vada",10.00,"Veg");
+insert into   menu_items values (7,"Poori",15.00,"Veg");
+insert into   menu_items values (8,"Idly",6.00,"Veg");
+insert into   menu_items values (9,"Veg_Meals",100.00,"Veg");
+insert into   menu_items values (10,"Veg-Briyani",130.00,"Veg");
+insert into   menu_items values (11,"Lemon_Rice",60.00,"Veg");
+insert into   menu_items values (12,"MuttonBriyani",250.00,"Non-Veg");
+insert into   menu_items values (13,"ChickenBriyani",150.00,"Non-Veg");
+insert into   menu_items values (14,"BeefBriyani",150.00,"Non-Veg");
+insert into   menu_items values (15,"Fish_Meal",180.00,"Non-Veg");
+insert into   menu_items values (16,"Noodles",70.00,"Non_Veg");
+insert into   menu_items values (17,"ChickenRice",80.00,"Non-Veg");
+insert into   menu_items values (18,"Chicken_65",120.00,"Starters");
+insert into   menu_items values (19,"Pepper_Chicken",110.00,"Starters");
+insert into   menu_items values (20,"Chicken_Grill(Full)",440.00,"Starters");
+insert into   menu_items values (21,"Chicken _Grill",220.00,"Starters");
+insert into   menu_items values (22,"BarbequeChicken",400.00,"Startees");
+insert into   menu_items values (23,"ChocoMilkShake",80.00,"Shakes");
+insert into   menu_items values (24,"VanillaMilkShake",60.00,"Shakes");
+insert into   menu_items values (25,"StrawberryMilkShake",60.00,"Shakes");
+select * from menu_items;
+delete from restaurant.orders;
+DELETE FROM orders ;
+delete from menu_items;
+
+
